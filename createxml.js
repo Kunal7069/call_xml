@@ -1,10 +1,16 @@
 const express = require('express');
-
+const cors = require("cors");
 const app = express();
 const port = 3000;
 
 app.use(express.json());
-
+app.use(cors(
+    {
+      origin: '*', // Your frontend URL
+      methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+      credentials: true
+    }
+  ));
 app.post('/', (req, res) => {
     // Define the XML content directly in the code
     const xmlContent = `<?xml version="1.0" encoding="UTF-8"?>
