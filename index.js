@@ -16,8 +16,7 @@ app.post('/', (req, res) => {
     const xmlContent = `<?xml version="1.0" encoding="UTF-8"?>
     <Response>
         <Say voice="woman">Hello, this is a test call from Kunal.</Say>
-        <Say voice="woman">He is a softare engineer.</Say>
-        <Say voice="woman">Thank you for your time.</Say>
+         <Dial>+917417627534</Dial>
     </Response>`;
 
     // Set the content type and send the XML content
